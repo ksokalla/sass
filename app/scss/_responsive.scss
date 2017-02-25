@@ -1,0 +1,92 @@
+/* General Styles */
+
+
+/* General Styles End */
+
+
+
+
+/* Main Menu Styles */
+
+@media all and (max-width: 786px) {
+	#main-nav, #main-nav.scroll {
+		background-color: #fff;
+	}
+	
+	#main-nav a, #main-nav.scroll a {
+		color: #0ed8d6;
+	}
+	
+	#main-nav a:hover, #main-nav.scroll a:hover {
+		color: #777777;
+	}
+	
+	#main-nav .navbar-toggle {
+		background-color: #fff;
+		transition: all .3s;
+	}
+	
+	#main-nav .navbar-toggle:hover {
+		background-color: #0ed8d6;
+	}
+	
+	#main-nav .icon-bar {
+		background-color: #0ed8d6;
+	}
+	
+	#main-nav .navbar-toggle:hover .icon-bar {
+		background-color: #fff;
+	}
+}
+
+/* Main Menu Styles End */
+
+
+
+
+/* Main Header Styles */
+@media all and (max-width: 480px) {
+
+	#main-header .header-caption h1 {
+		font-size: 2.8em;
+	}
+
+	#main-header .header-caption h2 {
+		font-size: 1.5em;
+	}
+}
+
+/* Main Header Styles End */
+
+/* Section Contact */
+
+@media all and (max-width: 786px) {
+	#contact [class*='col-'] {
+		margin-bottom: 30px;
+	}
+}
+
+/* Section Contact End */
+
+
+/* Footer */
+
+@media all and (max-width: 992px) {
+	
+	#main-footer ul {
+		padding: 0;
+	}
+}
+
+@media all and (max-width: 786px) {
+	#main-footer {
+		text-align: center;
+	}
+	
+	#main-footer ul li {
+		margin: 0;
+		padding: 5px;
+	}
+}
+
+/* Footer End */

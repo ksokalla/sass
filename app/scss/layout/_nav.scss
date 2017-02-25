@@ -1,0 +1,41 @@
+
+#main-nav {
+    
+	background-color: transparent;
+	border: 0;
+    a {
+        color: #fff;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        transition: all .3s;
+    }
+    &.navbar-brand{
+        font-size: 2em;
+        font-family: 'Droid Serif', sans-serif;
+        text-transform: none;
+    }
+}
+
+
+#main-nav a {
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	transition: all .3s;
+}
+
+#main-nav a:hover {
+	color: #0ed8d6;
+}
+
+#main-nav.scroll {
+	background-color: rgba(14, 216, 214, 0.85);
+}
+
+#main-nav.scroll a {
+	color: #fff;
+}
+
+#main-nav.scroll a:hover {
+	color: #777777;
+}

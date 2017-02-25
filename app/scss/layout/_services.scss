@@ -1,0 +1,19 @@
+
+#services .fa {
+	font-size: 3em;
+	height: 80px;
+	width: 80px;
+	line-height: 80px;
+	border: 1px solid #0ed8d6;
+	border-radius: 50%;
+	color: #fff;
+	background-color: #0ed8d6;
+	transition: all .3s;
+	
+}
+
+#services .fa:hover {
+	color: #0ed8d6;
+	background-color: #fff;
+	transform: rotate(360deg);
+}

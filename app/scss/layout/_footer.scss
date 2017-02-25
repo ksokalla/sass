@@ -1,0 +1,30 @@
+
+#main-footer {
+	padding: 10px 0;
+}
+
+#main-footer nav, #main-footer .copyright {
+	line-height: 50px;
+	margin: 0;
+}
+
+
+#main-footer nav, #main-footer .social-icons {
+	text-align: center;
+}
+
+#main-footer  ul li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#main-footer nav a {
+	color: #777;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+	transition: all .3s;
+}
+
+#main-footer nav a:hover {
+	color: #0ed8d6;
+}
