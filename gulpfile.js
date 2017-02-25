@@ -4,6 +4,8 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var cssnano = require('gulp-cssnano');
+var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
 
 
 gulp.task('hello',function(){
@@ -50,6 +52,28 @@ gulp.task('cssnano', function(){
 	.pipe(gulp.dest('dist/css'));
 });
 
+/* przerzucenie plików js do folderu dist (na produkcję)*/
+
+gulp.task('uglify', function(){
+	return gulp.src('app/js/*.js')
+	.pipe(uglify())
+	.pipe(gulp.dest('dist/js'));
+});
+
+/* przerzucenie plików img do folderu dist (na produkcję)*/
+
+gulp.task('images', function(){
+  return gulp.src('app/img/**/*.+(png|jpg|gif|svg)')
+  .pipe(imagemin())
+  .pipe(gulp.dest('dist/img'))
+});
+
+/* przerzucenie fontów do folderu dist (na produkcję)*/
+
+gulp.task('fonts', function() {
+  return gulp.src('app/fonts/*')
+  .pipe(gulp.dest('dist/fonts'))
+})
 
 /* Obserwacja zmian w plikach */
 gulp.task('watch',['sass','browserSync'], function(){
@@ -58,5 +82,5 @@ gulp.task('watch',['sass','browserSync'], function(){
 });
 
 
-gulp.task('build', ['dist', 'sass']);
+gulp.task('build', ['sass', 'dist', 'cssnano', 'uglify', 'images', 'fonts']);
 
