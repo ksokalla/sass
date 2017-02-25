@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
+var cssnano = require('gulp-cssnano');
 
 
 gulp.task('hello',function(){
@@ -34,10 +35,28 @@ gulp.task('sass', function(){
     
 });
 
+/* przerzucenie plików html do folderu dist (na produkcję)*/
+
+gulp.task('dist', function(){
+	return gulp.src('app/**/*.html')
+	.pipe(gulp.dest('dist'));
+});
+
+/* przerzucenie plików css do folderu dist (na produkcję)*/
+
+gulp.task('cssnano', function(){
+	return gulp.src('app/css/*.css')
+	.pipe(cssnano())
+	.pipe(gulp.dest('dist/css'));
+});
+
 
 /* Obserwacja zmian w plikach */
 gulp.task('watch',['sass','browserSync'], function(){
    gulp.watch('app/scss/**/*.scss',['sass']);  
    gulp.watch('app/*.html', browserSync.reload); 
 });
+
+
+gulp.task('build', ['dist', 'sass']);
 
